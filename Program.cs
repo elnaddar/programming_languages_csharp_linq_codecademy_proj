@@ -78,6 +78,21 @@ namespace ProgrammingLanguages
             foreach (var lang in lispLangs)
                 Console.Write(lang + ", ");
             Console.WriteLine();
+
+
+            /*
+                6. Programmers really like to call their languages “scripts”.
+                   Find all of the language names that contain the word "Script" (capital S).
+                   Make sure the query only selects the name of each language.
+            */
+            var scriptLangs = from l in languages
+                              where l.Name.Contains("Script")
+                              select l.Name;
+
+            Console.WriteLine($"\nThere are {scriptLangs.Count()} languages that have Script in their name.");
+            foreach (var lang in scriptLangs)
+                Console.Write(lang + ", ");
+            Console.WriteLine();
         }
     }
 }
