@@ -105,6 +105,17 @@ namespace ProgrammingLanguages
             var langsBetween1995And2005 = languages
                                           .Where(l => l.Year >= 1995 && l.Year <= 2005);
             Console.WriteLine($"\nThere are {langsBetween1995And2005.Count()} languages were launched between 1995 and 2005.");
+
+
+            /*
+                9. Print a string for each of those near-millennium languages.
+                   In your query add a Select operation that returns a string of this format for each element:
+                   ```txt
+                   NAME was invented in YEAR
+                   ```
+            */
+            foreach (var lang in langsBetween1995And2005.Select(l => $"{l.Name} was invented in {l.Year}"))
+                Console.WriteLine(lang);
         }
     }
 }
