@@ -116,6 +116,19 @@ namespace ProgrammingLanguages
             */
             foreach (var lang in langsBetween1995And2005.Select(l => $"{l.Name} was invented in {l.Year}"))
                 Console.WriteLine(lang);
+
+
+            /*
+                12. Your queries are currently sorted by year since the languages list was sorted by year.
+                    - Try sorting a query alphabetically (on the name of each language) using the OrderBy() method.
+                    - Find the oldest language in the list using the Min() method.
+            */
+            var languagesABSort = languages.OrderBy(l => l.Name);
+            PrettyPrintAll(languagesABSort);
+
+            int oldestLangYear = languages.Min(l => l.Year);
+            var oldestLang = languages.Where(l => l.Year == oldestLangYear);
+            PrettyPrintAll(oldestLang);
         }
 
         /*
