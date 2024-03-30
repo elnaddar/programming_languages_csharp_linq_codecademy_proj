@@ -93,6 +93,12 @@ namespace ProgrammingLanguages
             foreach (var lang in scriptLangs)
                 Console.Write(lang + ", ");
             Console.WriteLine();
+
+
+            /*
+                7. How many languages are included in the languages list?
+            */
+            Console.WriteLine($"\nThere are {languages.Count} in `languages` list.");
         }
     }
 }
