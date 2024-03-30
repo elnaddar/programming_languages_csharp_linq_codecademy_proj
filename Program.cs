@@ -42,6 +42,19 @@ namespace ProgrammingLanguages
 
             foreach (var lang in csLang)
                 Console.WriteLine(lang);
+
+
+            /*
+                3. Microsoft invented a bunch of languages, not just C#!
+                   Find all of the languages which have "Microsoft" included in their ChiefDeveloper property.
+            */
+            var msLangs = languages
+                          .Where(l => l.ChiefDeveloper.Contains("Microsoft"))
+                          .Select(l => l.Name);
+
+            Console.WriteLine($"Microsoft invented {msLangs.Count()} languages.");
+            foreach (var lang in msLangs)
+                Console.WriteLine(lang);
         }
     }
 }
