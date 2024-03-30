@@ -21,12 +21,14 @@ namespace ProgrammingLanguages
             foreach (Language l in languages)
                 Console.WriteLine(l.Prettify());
 
+
             /*
                 2. Write a query that returns a string for each language. It should include the year, name, and chief developer of each language.
                    Print each one to the console.
             */
             foreach (var s in languages.Select(l => $"{l.Year}, {l.Name}, {l.ChiefDeveloper}"))
                 Console.WriteLine(s);
+
 
             /*
                 3. When was C# first released?
