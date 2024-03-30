@@ -45,7 +45,7 @@ namespace ProgrammingLanguages
 
 
             /*
-                3. Microsoft invented a bunch of languages, not just C#!
+                4. Microsoft invented a bunch of languages, not just C#!
                    Find all of the languages which have "Microsoft" included in their ChiefDeveloper property.
             */
             var msLangs = languages
@@ -55,6 +55,29 @@ namespace ProgrammingLanguages
             Console.WriteLine($"Microsoft invented {msLangs.Count()} languages.");
             foreach (var lang in msLangs)
                 Console.WriteLine(lang);
+
+
+            /*
+                5. A few early languages laid the foundation for many of the advanced
+                   languages we use now. One of those languages is Lisp, which looks like
+                   this:  
+                   ``` styles_pre__Vzth4
+                   ;;; Here's a comment
+                   (print "Hello world")
+                   (+ 3 4)
+                   (let x 29)
+                   ```
+                   Find all of the languages that descend from Lisp.
+
+            */
+            var lispLangs = from l in languages
+                            where l.Predecessors.Contains("Lisp")
+                            select l.Name;
+
+            Console.WriteLine($"\nThere are {msLangs.Count()} languages that descend from Lisp.");
+            foreach (var lang in lispLangs)
+                Console.Write(lang + ", ");
+            Console.WriteLine();
         }
     }
 }
