@@ -130,5 +130,18 @@ namespace ProgrammingLanguages
             foreach (Language l in langs)
                 Console.WriteLine(l.Prettify());
         }
+
+        /*
+            11. You might have also used foreach loops to print every query result in this project.
+                Write a method PrintAll() that handles that for us. It should:
+                - return nothing
+                - accept an argument of type IEnumerable<Object>
+                - prints every object in the argument
+        */
+        static void PrintAll(IEnumerable<Object> objs)
+        {
+            foreach (Object o in objs)
+                Console.WriteLine(o);
+        }
     }
 }
