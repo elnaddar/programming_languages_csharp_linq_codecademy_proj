@@ -16,6 +16,9 @@ namespace ProgrammingLanguages
 
             foreach (Language l in languages)
                 Console.WriteLine(l.Prettify());
+
+            foreach (var s in languages.Select(l => $"{l.Year}, {l.Name}, {l.ChiefDeveloper}"))
+                Console.WriteLine(s);
         }
     }
 }
