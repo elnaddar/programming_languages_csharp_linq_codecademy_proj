@@ -99,6 +99,12 @@ namespace ProgrammingLanguages
                 7. How many languages are included in the languages list?
             */
             Console.WriteLine($"\nThere are {languages.Count} in `languages` list.");
+
+
+            // 8. How many languages were launched between 1995 and 2005?
+            var langsBetween1995And2005 = languages
+                                          .Where(l => l.Year >= 1995 && l.Year <= 2005);
+            Console.WriteLine($"\nThere are {langsBetween1995And2005.Count()} languages were launched between 1995 and 2005.");
         }
     }
 }
