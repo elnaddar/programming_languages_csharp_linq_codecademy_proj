@@ -117,5 +117,18 @@ namespace ProgrammingLanguages
             foreach (var lang in langsBetween1995And2005.Select(l => $"{l.Name} was invented in {l.Year}"))
                 Console.WriteLine(lang);
         }
+
+        /*
+            10. You might have used foreach loops to print every Language in this project.
+                Write a method PrettyPrintAll() that handles that for us. It should:
+                - return nothing
+                - accept an argument of type IEnumerable<Language>
+                - pretty print every language in the argument
+        */
+        static void PrettyPrintAll(IEnumerable<Language> langs)
+        {
+            foreach (Language l in langs)
+                Console.WriteLine(l.Prettify());
+        }
     }
 }
